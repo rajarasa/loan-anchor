@@ -1,0 +1,194 @@
+/* ==========================================================================
+   Loan Anchor Financing Brokers LLC - Core Stylesheet
+   Fonts, Variables, Custom Utilities, and Animations
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Gilroy-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Gilroy-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Gilroy-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Minion';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/MinionVariableConcept-Roman.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Minion';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('../fonts/MinionVariableConcept-Italic.otf') format('opentype');
+}
+
+:root {
+  --navy: #052557;
+  --navy-light: #0a3170;
+  --navy-dark: #031738;
+  --navy-deep: #021027;
+  --gold: #c8912e;
+  --gold-light: #d9a441;
+  --gold-dark: #b27f23;
+  --gold-pale: #f5eee0;
+  --ink: #12285a;
+  --ink-muted: #52617d;
+  --cream: #f8f6f0;
+  --cream-dark: #f0ece1;
+  --cream-light: #faf8f5;
+  --sand: #f2ecdf;
+  --white: #ffffff;
+  --sans: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --serif: 'Minion', Georgia, 'Times New Roman', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background-color: #ffffff;
+  font-weight: 500;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8912e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b27f23;
+}
+
+/* Typography Helpers */
+.font-serif-italic {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+.font-serif {
+  font-family: var(--serif);
+  font-style: normal;
+}
+
+.font-gilroy {
+  font-family: var(--sans);
+}
+
+/* Navigation active indicator */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--gold);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* Floating WhatsApp Pulse */
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.65);
+  }
+}
+
+.whatsapp-float {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+/* Certifications Carousel Track */
+.cert-track {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.cert-track::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
