@@ -1,0 +1,51 @@
+﻿<!-- ==========================================
+     COMMON HEADER COMPONENT - LOAN ANCHOR
+     ========================================== -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20 sm:h-24">
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex-shrink-0 transition-transform duration-200 hover:opacity-95" aria-label="Loan Anchor Financing Brokers LLC Home">
+        <img class="h-12 sm:h-14 md:h-16 w-auto object-contain" src="images/logo.png" alt="Loan Anchor Financing Brokers LLC">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 lg:space-x-10" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link text-xs lg:text-sm font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors duration-150 {{NAV_HOME_ACTIVE}}">Home</a>
+        <a href="services.html" class="nav-link text-xs lg:text-sm font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors duration-150 {{NAV_SERVICES_ACTIVE}}">Services</a>
+        <a href="about.html" class="nav-link text-xs lg:text-sm font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors duration-150 {{NAV_ABOUT_ACTIVE}}">About</a>
+        <a href="services.html#faqs" class="nav-link text-xs lg:text-sm font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors duration-150 {{NAV_FAQS_ACTIVE}}">FAQs</a>
+        <a href="about.html#team" class="nav-link text-xs lg:text-sm font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors duration-150 {{NAV_TEAM_ACTIVE}}">Our Team</a>
+        <a href="contact.html" class="nav-link text-xs lg:text-sm font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors duration-150 {{NAV_CONTACT_ACTIVE}}">Contact</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden items-center">
+        <button id="mobile-menu-btn" type="button" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gold text-white flex items-center justify-center shadow-sm hover:bg-gold-dark transition-colors focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle mobile menu">
+          <svg id="burger-icon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-2 shadow-lg transition-all">
+    <a href="index.html" class="block px-3 py-2.5 rounded-md text-sm font-bold uppercase tracking-wider text-navy hover:text-gold hover:bg-gray-50 {{MOB_HOME_ACTIVE}}">Home</a>
+    <a href="services.html" class="block px-3 py-2.5 rounded-md text-sm font-bold uppercase tracking-wider text-navy hover:text-gold hover:bg-gray-50 {{MOB_SERVICES_ACTIVE}}">Services</a>
+    <a href="about.html" class="block px-3 py-2.5 rounded-md text-sm font-bold uppercase tracking-wider text-navy hover:text-gold hover:bg-gray-50 {{MOB_ABOUT_ACTIVE}}">About</a>
+    <a href="services.html#faqs" class="block px-3 py-2.5 rounded-md text-sm font-bold uppercase tracking-wider text-navy hover:text-gold hover:bg-gray-50">FAQs</a>
+    <a href="about.html#team" class="block px-3 py-2.5 rounded-md text-sm font-bold uppercase tracking-wider text-navy hover:text-gold hover:bg-gray-50">Our Team</a>
+    <a href="contact.html" class="block px-3 py-2.5 rounded-md text-sm font-bold uppercase tracking-wider text-navy hover:text-gold hover:bg-gray-50 {{MOB_CONTACT_ACTIVE}}">Contact</a>
+    <div class="pt-4 border-t border-gray-100">
+      <a href="https://wa.me/971525221369?text=Hello%20Loan%20Anchor,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-2 w-full py-2.5 px-4 bg-[#25D366] text-white rounded-md font-bold text-sm shadow hover:bg-[#1ebe5d] transition-colors">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.16C10.57 20.16 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.68 12.04 3.68C14.25 3.68 16.31 4.54 17.87 6.11C19.43 7.67 20.28 9.74 20.28 11.92C20.28 16.46 16.59 20.16 12.05 20.16ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.64 13.5 14.48 13.46 14.31 13.71C14.15 13.96 13.68 14.51 13.54 14.67C13.4 14.84 13.26 14.86 13.01 14.73C12.76 14.61 11.96 14.34 11.01 13.49C10.27 12.83 9.77 12.02 9.63 11.77C9.49 11.52 9.61 11.39 9.74 11.26C9.85 11.15 9.99 10.97 10.11 10.83C10.24 10.68 10.28 10.58 10.36 10.41C10.44 10.25 10.4 10.1 10.34 9.98C10.28 9.85 9.79 8.65 9.58 8.16C9.38 7.68 9.18 7.74 9.03 7.73C8.89 7.73 8.72 7.73 8.56 7.73C8.39 7.73 8.12 7.79 7.89 8.04C7.66 8.29 7.02 8.89 7.02 10.11C7.02 11.33 7.91 12.5 8.03 12.67C8.16 12.83 9.77 15.31 12.24 16.38C12.83 16.63 13.28 16.78 13.64 16.9C14.23 17.08 14.77 17.06 15.2 16.99C15.68 16.92 16.67 16.39 16.88 15.81C17.08 15.24 17.08 14.75 17.02 14.65C16.96 14.54 16.82 14.51 16.57 14.39Z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</header>

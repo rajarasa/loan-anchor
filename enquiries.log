@@ -1,0 +1,18 @@
+{
+    "date": "10 Nov 2026, 08:16:40 CET",
+    "name": "Sara Al Falasi",
+    "email": "sara@example.com",
+    "phone": "+971 50 123 4567",
+    "service": "Personal Financing Guidance",
+    "message": "Hello, I would like to check personal financing eligibility.",
+    "ip": "Unknown"
+},
+{
+    "date": "11 Nov 2026, 10:38:13 CET",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "phone": "+971 50 123 4567",
+    "service": "Personal Financing Guidance",
+    "message": "Testing form submission logic",
+    "ip": "127.0.0.1"
+},
